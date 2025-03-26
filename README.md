@@ -59,6 +59,26 @@ Let's run our server:
 uv run main.py
 ```
 
+Great. We can kill the server with `ctrl+c`, and connect this MCP server to cursor agent:
+
+Go to `Settings` > `MCP` and click on `Add new Global MCP Server`. It will open an `mcp.json`file. Add the following code in the `mcp.json` file.
+
+```
+{
+    "mcpServers": {
+        "content-database-mcp": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "/PATH/to/content-database-mcp",
+                "run",
+                "main.py"
+            ]
+        }
+    }
+}
+```
+
 This should output:
 
 ```bash
