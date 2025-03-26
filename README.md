@@ -14,7 +14,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 Make sure to restart your terminal afterwards to ensure that the uv command gets picked up.
 
-Now, let’s create and set up our project:
+1. Create and set up our project:
 
 ```
 # Create a new directory for our project
@@ -32,7 +32,7 @@ uv add "mcp[cli]" httpx
 touch main.py
 ```
 
-Let's add the boilerplate code to main.py:
+2. Add the MCP boilerplate code to main.py:
 
 ```python
 from typing import Any
@@ -53,7 +53,7 @@ if __name__ == "__main__":
     mcp.run(transport='stdio')
 ```
 
-Let's run our server:
+3. Test the server by running it:
 
 ```bash
 uv run main.py
@@ -61,7 +61,23 @@ uv run main.py
 
 Great. We can kill the server with `ctrl+c`, and connect this MCP server to cursor agent:
 
-Go to `Settings` > `MCP` and click on `Add new Global MCP Server`. It will open an `mcp.json`file. Add the following code in the `mcp.json` file.
+4. Connect MCP server to Claude or Cursor.
+
+#### For Cursor
+
+Go to `Settings` > `MCP` and click on `Add new Global MCP Server`. It will open an `mcp.json`file. Configure your server with Cursor by adding the code below.
+
+#### For Claude
+
+Open `claude_desktop_config.json` file using the following command:
+
+```
+code ~/Library/Application\ Support/Claude/claude_desktop_config.json
+```
+
+Configure your server with Cursor by adding the code below.
+
+#### Configuration json.
 
 ```
 {
