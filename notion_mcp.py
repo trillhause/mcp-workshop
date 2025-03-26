@@ -3,25 +3,12 @@ import httpx
 from mcp.server.fastmcp import FastMCP
 
 # Initialize FastMCP server
-mcp = FastMCP("my-notion-mcp")
+mcp = FastMCP("content-database-mcp")
 
 @mcp.tool()
-async def find_posts() -> str:
-    """Find posts in my content database."""
-    print("Querying database for posts...")
-    return ["Mock post 1", "Mock post 2", "Mock post 3"]
-
-@mcp.tool()
-async def create_post() -> str:
-    """Create a new post in my content database."""
-    print("Creating new post in database...")
-    return "New mock post Created: New post title"
-
-@mcp.tool()
-async def add_content_to_post() -> str:
-    """Update a database entry in Notion."""
-    print("Adding content to post...")
-    return "Content added to post"
+async def my_tool() -> str:
+    """My awesome tool."""
+    print("I am going to do something awesome today!")
 
 if __name__ == "__main__":
     # Initialize and run the server
