@@ -105,7 +105,7 @@ print("Starting MCP server...")
 
 ### Checkpoint 1: MCP Tool Design
 
-1. Duplicate the following Notion Template in your workspace: [Content Database](https://www.notion.so/trillhouse/1c2e61f4e4968058a172e2267ec6b31e?v=1c2e61f4e496809382f1000c0aeec348)
+1. Duplicate the following Notion Template in your workspace: [Content Database](https://trillhouse.notion.site/MCP-Workshop-1c2e61f4e49680318c89fe36bbd80336)
 
 2. Design the desired tools in our MCP server.
 
